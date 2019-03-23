@@ -5,7 +5,7 @@
  *                /-----\  |      | \  |  v  | |     | |  /                 *
  *               /       \ |      |  \ |     | +-----+ +-/                  *
  ****************************************************************************
- * AFKMud Copyright 1997-2015 by Roger Libiez (Samson),                     *
+ * AFKMud Copyright 1997-2019 by Roger Libiez (Samson),                     *
  * Levi Beckerson (Whir), Michael Ward (Tarl), Erik Wolfe (Dwip),           *
  * Cameron Carroll (Cam), Cyberfox, Karangi, Rathian, Raine,                *
  * Xorith, and Adjani.                                                      *
@@ -134,7 +134,7 @@ CMDF( do_newpassword )
 
    argument = one_argument( argument, arg1 );
 
-   if( ( *ch->pcdata->pwd != '\0' ) && ( arg1.empty(  ) || argument.empty(  ) ) )
+   if( ( ch->pcdata->pwd[0] != '\0' ) && ( arg1.empty(  ) || argument.empty(  ) ) )
    {
       ch->print( "Syntax: newpass <char> <newpassword>\r\n" );
       return;

@@ -5,7 +5,7 @@
  *                /-----\  |      | \  |  v  | |     | |  /                 *
  *               /       \ |      |  \ |     | +-----+ +-/                  *
  ****************************************************************************
- * AFKMud Copyright 1997-2015 by Roger Libiez (Samson),                     *
+ * AFKMud Copyright 1997-2019 by Roger Libiez (Samson),                     *
  * Levi Beckerson (Whir), Michael Ward (Tarl), Erik Wolfe (Dwip),           *
  * Cameron Carroll (Cam), Cyberfox, Karangi, Rathian, Raine,                *
  * Xorith, and Adjani.                                                      *
@@ -908,7 +908,7 @@ CMDF( do_setholiday )
           * List all the months with a counter next to them 
           */
          count = 1;
-         while( *month_name[x] != '\0' && str_cmp( month_name[x], " " ) && x < sysdata->monthsperyear )
+         while( month_name[x][0] != '\0' && str_cmp( month_name[x], " " ) && x < sysdata->monthsperyear )
          {
             ch->printf( "&[red](&[white]%d&[red])&[yellow]%s\r\n", count, month_name[x] );
             ++x;

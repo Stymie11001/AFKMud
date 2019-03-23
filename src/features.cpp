@@ -5,7 +5,7 @@
  *                /-----\  |      | \  |  v  | |     | |  /                 *
  *               /       \ |      |  \ |     | +-----+ +-/                  *
  ****************************************************************************
- * AFKMud Copyright 1997-2015 by Roger Libiez (Samson),                     *
+ * AFKMud Copyright 1997-2019 by Roger Libiez (Samson),                     *
  * Levi Beckerson (Whir), Michael Ward (Tarl), Erik Wolfe (Dwip),           *
  * Cameron Carroll (Cam), Cyberfox, Karangi, Rathian, Raine,                *
  * Xorith, and Adjani.                                                      *
@@ -34,7 +34,7 @@
 /*
  * mccp.c - support functions for mccp (the Mud Client Compression Protocol)
  *
- * see http://mccp.smaugmuds.org
+ * see https://smaugmuds.afkmods.com/mccp
  *
  * Copyright (c) 1999, Oliver Jowett <oliver@randomly.org>.
  *

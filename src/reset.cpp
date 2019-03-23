@@ -5,7 +5,7 @@
  *                /-----\  |      | \  |  v  | |     | |  /                 *
  *               /       \ |      |  \ |     | +-----+ +-/                  *
  ****************************************************************************
- * AFKMud Copyright 1997-2015 by Roger Libiez (Samson),                     *
+ * AFKMud Copyright 1997-2019 by Roger Libiez (Samson),                     *
  * Levi Beckerson (Whir), Michael Ward (Tarl), Erik Wolfe (Dwip),           *
  * Cameron Carroll (Cam), Cyberfox, Karangi, Rathian, Raine,                *
  * Xorith, and Adjani.                                                      *
@@ -373,7 +373,7 @@ void delete_reset( reset_data * pReset )
 
 void instaroom( char_data * ch, room_index * pRoom, bool dodoors )
 {
-10   list < char_data * >::iterator ich;
+   list < char_data * >::iterator ich;
 
    for( ich = pRoom->people.begin(  ); ich != pRoom->people.end(  ); ++ich )
    {

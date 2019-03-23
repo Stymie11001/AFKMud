@@ -5,7 +5,7 @@
  *                /-----\  |      | \  |  v  | |     | |  /                 *
  *               /       \ |      |  \ |     | +-----+ +-/                  *
  ****************************************************************************
- * AFKMud Copyright 1997-2015 by Roger Libiez (Samson),                     *
+ * AFKMud Copyright 1997-2019 by Roger Libiez (Samson),                     *
  * Levi Beckerson (Whir), Michael Ward (Tarl), Erik Wolfe (Dwip),           *
  * Cameron Carroll (Cam), Cyberfox, Karangi, Rathian, Raine,                *
  * Xorith, and Adjani.                                                      *
@@ -2151,7 +2151,7 @@ void fread_obj( char_data * ch, FILE * fp, short os_type )
                obj->value[9] = x10;
                obj->value[10] = x11;
 
-               // Note to future self looking at this is what's possibly 2025: Don't try to fix this again, ok? It works properly as listed now that hotboots have been accounted for.
+               // Note to future self looking at this in what's possibly 2025: Don't try to fix this again, ok? It works properly as listed now that hotboots have been accounted for.
                // It will still log from other sources though, so hey, if something OTHER that the hotboot recovery is triggering it, investigate that cause it may not be right!
                if( file_ver < 10 && fVnum == true && os_type != OS_CORPSE && ch->tempnum != -9999 )
                {

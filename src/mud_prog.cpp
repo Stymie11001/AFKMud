@@ -5,7 +5,7 @@
  *                /-----\  |      | \  |  v  | |     | |  /                 *
  *               /       \ |      |  \ |     | +-----+ +-/                  *
  ****************************************************************************
- * AFKMud Copyright 1997-2015 by Roger Libiez (Samson),                     *
+ * AFKMud Copyright 1997-2019 by Roger Libiez (Samson),                     *
  * Levi Beckerson (Whir), Michael Ward (Tarl), Erik Wolfe (Dwip),           *
  * Cameron Carroll (Cam), Cyberfox, Karangi, Rathian, Raine,                *
  * Xorith, and Adjani.                                                      *
@@ -2244,7 +2244,7 @@ void mprog_driver( char *com_list, char_data * mob, char_data * actor, obj_data 
     * imms, but decided to just take it out.  If the mob can see you, 
     * you may be chosen as the random player. -Narn
     *
-    * BUGFIX - Reported by Aurin on the SmaugMuds.org forum.
+    * BUGFIX - Reported by Aurin on the SmaugMuds forum.
     *  Adapted for simplicity by Samson. The random pick wasn't as random as one might like.
     *  It had a heavy bias toward the first chosen target, but her fix relied
     *  on what looked like dodgy dynamic array allocation. This is safer as it doesn't

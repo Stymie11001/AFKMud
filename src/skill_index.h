@@ -5,7 +5,7 @@
  *                /-----\  |      | \  |  v  | |     | |  /                 *
  *               /       \ |      |  \ |     | +-----+ +-/                  *
  ****************************************************************************
- * AFKMud Copyright 1997-2015 by Roger Libiez (Samson),                     *
+ * AFKMud Copyright 1997-2019 by Roger Libiez (Samson),                     *
  * Levi Beckerson (Whir), Michael Ward (Tarl), Erik Wolfe (Dwip),           *
  * Cameron Carroll (Cam), Cyberfox, Karangi, Rathian, Raine,                *
  * Xorith, and Adjani.                                                      *
@@ -35,7 +35,13 @@ class string_sort
    bool operator(  ) ( const string &, const string & );
 };
 
+#if defined(__APPLE__)
+//Just deciding to go with default std:less for MacOSX
+typedef map < string, int > SKILL_INDEX;
+#else
 typedef map < string, int, string_sort > SKILL_INDEX;
+#endif
+
 
 extern SKILL_INDEX skill_table__index;
 extern SKILL_INDEX skill_table__spell;

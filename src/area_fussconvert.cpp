@@ -5,7 +5,7 @@
  *                /-----\  |      | \  |  v  | |     | |  /                 *
  *               /       \ |      |  \ |     | +-----+ +-/                  *
  ****************************************************************************
- * AFKMud Copyright 1997-2015 by Roger Libiez (Samson),                     *
+ * AFKMud Copyright 1997-2019 by Roger Libiez (Samson),                     *
  * Levi Beckerson (Whir), Michael Ward (Tarl), Erik Wolfe (Dwip),           *
  * Cameron Carroll (Cam), Cyberfox, Karangi, Rathian, Raine,                *
  * Xorith, and Adjani.                                                      *
@@ -204,7 +204,7 @@ affect_data *fread_fuss_affect( FILE * fp, const char *word )
 
 void fread_fuss_room( FILE * fp, area_data * tarea )
 {
-   room_index *pRoomIndex = NULL;
+   room_index *pRoomIndex = nullptr;
    bool oldroom = false;
 
    for( ;; )

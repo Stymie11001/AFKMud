@@ -5,7 +5,7 @@
  *                /-----\  |      | \  |  v  | |     | |  /                 *
  *               /       \ |      |  \ |     | +-----+ +-/                  *
  ****************************************************************************
- * AFKMud Copyright 1997-2015 by Roger Libiez (Samson),                     *
+ * AFKMud Copyright 1997-2019 by Roger Libiez (Samson),                     *
  * Levi Beckerson (Whir), Michael Ward (Tarl), Erik Wolfe (Dwip),           *
  * Cameron Carroll (Cam), Cyberfox, Karangi, Rathian, Raine,                *
  * Xorith, and Adjani.                                                      *
@@ -42,6 +42,9 @@ void bailout( int );
 #endif
 #if defined(__CYGWIN__)
 const int WAIT_ANY = -1;   /* This is not guaranteed to work! */
+#include <sys/socket.h>
+#endif
+#if defined(__APPLE__)
 #include <sys/socket.h>
 #endif
 #include <sys/time.h>
@@ -373,8 +376,12 @@ int init_socket( int mudport )
    /*
     * sa.sin_addr.s_addr = inet_addr( "x.x.x.x" ); 
     */
-
+#if defined(__APPLE__)
+   if( bind( fd, ( const struct sockaddr * )&sa, (socklen_t)sizeof( sa ) ) == -1 )
+#else
    if( bind( fd, ( struct sockaddr * )&sa, sizeof( sa ) ) == -1 )
+#endif
+   
    {
       perror( "Init_socket: bind" );
       close( fd );

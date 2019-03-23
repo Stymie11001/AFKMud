@@ -5,7 +5,7 @@
  *                /-----\  |      | \  |  v  | |     | |  /                 *
  *               /       \ |      |  \ |     | +-----+ +-/                  *
  ****************************************************************************
- * AFKMud Copyright 1997-2015 by Roger Libiez (Samson),                     *
+ * AFKMud Copyright 1997-2019 by Roger Libiez (Samson),                     *
  * Levi Beckerson (Whir), Michael Ward (Tarl), Erik Wolfe (Dwip),           *
  * Cameron Carroll (Cam), Cyberfox, Karangi, Rathian, Raine,                *
  * Xorith, and Adjani.                                                      *
@@ -32,7 +32,7 @@
  *
  * AFKMud: Versions 2.0 and up.
  *
- * Other derivatives should work too, please submit any needed changes to the SmaugMuds.org forums.
+ * Other derivatives should work too, please submit any needed changes to the SmaugMuds forums.
  */
 #ifndef __IMC2CFG_H__
 #define __IMC2CFG_H__
